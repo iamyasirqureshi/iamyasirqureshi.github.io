@@ -27,8 +27,9 @@ Previously completed my **Diploma in CSE from Government Polytechnic Mumbai (87%
 
 - 📱 Android Developer Intern @ **Learn Smasher Edutech LLP** (Jan–Jun 2025)
 - 🎮 Junior Unity Developer @ **AR/VR Club, GH Raisoni**
+- 📊 Data Visualization enthusiast (Power BI, Python, R)
 - 🎨 Portrait & Fine Sketch Artist
-- 📊 Data Visualization enthusiast (Power BI, R)
+
 
 ---
 
