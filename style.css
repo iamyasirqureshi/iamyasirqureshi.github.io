@@ -719,8 +719,7 @@ section { position: relative; z-index: 1; }
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.62rem;
   padding: 3px 10px;
-  border-radius: 4px  
-  
+  border-radius: 4px;
   letter-spacing: 0.1em;
 }
 
@@ -1284,4 +1283,72 @@ footer {
 @keyframes photoShimmer {
   0%   { background-position: 200% 200%; }
   100% { background-position: -200% -200%; }
+}
+/* ══════════════════════════════════════
+   VISITOR COUNTER
+══════════════════════════════════════ */
+.yq-visitor-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 28px;
+  padding: 8px 20px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.10);
+  border-radius: 999px;
+  backdrop-filter: blur(12px);
+  font-size: 13px;
+  color: rgba(238,238,245,0.45);
+  letter-spacing: 0.03em;
+  width: fit-content;
+  opacity: 0;
+  transform: translateY(6px);
+  animation: yqFadeUp 0.6s cubic-bezier(0.22,1,0.36,1) 1.4s forwards;
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+.yq-visitor-wrap:hover {
+  border-color: rgba(232,184,75,0.3);
+  background: rgba(232,184,75,0.04);
+}
+
+.yq-live-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #4ade80;
+  flex-shrink: 0;
+  animation: yqPulse 2.2s ease-in-out infinite;
+}
+
+.yq-eye { font-size: 13px; opacity: 0.55; line-height: 1; }
+
+#yq-count {
+  color: var(--gold);
+  font-weight: 700;
+  font-size: 14px;
+  font-family: 'JetBrains Mono', monospace;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.01em;
+  min-width: 24px;
+  transition: transform 0.15s cubic-bezier(0.34,1.56,0.64,1);
+}
+
+#yq-count.yq-pop { transform: scale(1.2); }
+
+.yq-label {
+  font-size: 11px;
+  opacity: 0.45;
+  font-family: 'JetBrains Mono', monospace;
+  letter-spacing: 0.04em;
+}
+
+@keyframes yqFadeUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes yqPulse {
+  0%  { box-shadow: 0 0 0 0   rgba(74,222,128,0.6); }
+  60% { box-shadow: 0 0 0 7px rgba(74,222,128,0);   }
+  100%{ box-shadow: 0 0 0 0   rgba(74,222,128,0);   }
 }
