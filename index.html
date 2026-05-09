@@ -26,7 +26,7 @@
 
   const app      = initializeApp(firebaseConfig);
   const db       = getDatabase(app);
-  const countRef = ref(db, "profile views");
+  const countRef = ref(db, "visitors");
 
   function easeOutExpo(t) {
     return t === 1 ? 1 : 1 - Math.pow(2, -10 * t);
@@ -116,7 +116,7 @@
         <span class="yq-live-dot"></span>
         <span class="yq-eye">👁</span>
         <span id="yq-count">0</span>
-        <span class="yq-label">visiter</span>
+        <span class="yq-label">Profile Views</span>
       </div>
 
       <div class="hero-btns">
