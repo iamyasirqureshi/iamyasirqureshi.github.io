@@ -26,7 +26,7 @@
 
   const app      = initializeApp(firebaseConfig);
   const db       = getDatabase(app);
-  const countRef = ref(db, "visitors");
+  const countRef = ref(db, "profile views");
 
   function easeOutExpo(t) {
     return t === 1 ? 1 : 1 - Math.pow(2, -10 * t);
